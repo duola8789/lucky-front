@@ -1,0 +1,33 @@
+/**
+ * 可复用样式类, 在 SCSS 文件中可直接使用，例如 @include absCenter()
+ */
+// 绝对定位居中
+@mixin absCenter {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// 单行文字剪切
+@mixin text-overflow {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+// 多行文字剪切
+@mixin text-overflow-multiple($line) {
+    display: -webkit-box;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+// 按钮交互优化样式
+@mixin nice-btn {
+    @include linear-transition(0.2s);
+
+    cursor: pointer;
+    user-select: none;
+}

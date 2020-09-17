@@ -1,5 +1,7 @@
 # lucky-front
 
+Wish We all will be lucky
+
 ## Project setup
 ```
 yarn install
